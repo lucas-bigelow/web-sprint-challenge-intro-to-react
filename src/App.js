@@ -10,12 +10,17 @@ const Wrapper = styled.div`
   width: 80%;
   margin: 0 auto;
   text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  text-shadow: 2px 2px 0 #ffffba, 
+              -2px -2px 0 #ffffba,
+               2px -2px 0 #ffffba,
+              -2px 2px 0 #ffffba;
 `;
 
 const Header = styled.h1`
   font-size: 2.4rem;
   margin: 0.5em;
-  border-bottom: 2px solid black;
+  border-bottom: 5px solid #ffb3ba;
 `;
 
 const App = () => {

@@ -74,3 +74,9 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+/* My own custom styles to be added to the page at large */
+
+body {
+  background-color: #bae1ff;
+}

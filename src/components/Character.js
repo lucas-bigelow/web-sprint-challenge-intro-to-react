@@ -4,9 +4,11 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 const Box = styled.div`
-  border: 1px solid black;
+  border: 0.3rem solid 	#baffc9;
+  border-radius: 0.5rem;
   width: 80%;
   margin: 0.5rem auto;
+  background-color: 	#ffdfba;
 
   .hidden {
     display: none
