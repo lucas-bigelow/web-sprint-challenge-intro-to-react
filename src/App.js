@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 import Characters from './components/Characters';
 
-// styling for our app
+// styling for our app (text shadow is used to add a little flair around the lettering)
 const Wrapper = styled.div`
   width: 80%;
   margin: 0 auto;
@@ -40,7 +40,7 @@ const App = () => {
   return (
     <Wrapper>
       <Header>Characters</Header>
-      {/* <SearchBar /> */}
+      {/* <SearchBar /> ---- WIP TO BE ADDED IF ALL ELSE IS COMPLETED*/}
       <Characters characters={characters}/>
     </Wrapper>
   );
