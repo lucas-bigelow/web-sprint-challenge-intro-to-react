@@ -6,9 +6,9 @@ function Characters(props) {
   const { characters } = props;
 
   return (
-    <div className="">
+    <div>
       {characters.map(character => {
-        return <Character character={character} />
+        return <Character key={character.name} character={character} />
       })}
     </div>
   )

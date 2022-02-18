@@ -5,16 +5,26 @@ import styled from 'styled-components';
 
 import Characters from './components/Characters';
 
+// styling for our app
+const Wrapper = styled.div`
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+`;
+
+const Header = styled.h1`
+  font-size: 2.4rem;
+  margin: 0.5em;
+  border-bottom: 2px solid black;
+`;
+
 const App = () => {
-  // Try to think through what state you'll need for this app before starting. Then build out
-  // the state properties here.
+  // characters is the only state i'll need and be passing down
   const [characters, setCharacters] = useState([]);
 
+  // base url and get http request
   const BASE_URL = "https://swapi.dev/api/people";
 
-  // Fetch characters from the API in an effect hook. Remember, anytime you have a 
-  // side effect in a component, you want to think about which state and/or props it should
-  // sync up with, if any.
   useEffect(() => {
     axios.get(BASE_URL)
       .then(res => res.data)
@@ -23,11 +33,11 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
-      <h1 className="Header">Characters</h1>
+    <Wrapper>
+      <Header>Characters</Header>
       {/* <SearchBar /> */}
       <Characters characters={characters}/>
-    </div>
+    </Wrapper>
   );
 }
 
