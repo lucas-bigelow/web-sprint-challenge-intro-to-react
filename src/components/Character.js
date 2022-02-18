@@ -41,7 +41,7 @@ function Character(props) {
       <h2>{character.name}</h2>
       <div className={hidden ? "hidden" : ""}>
         <p>Born: {character.birth_year}</p>
-        <p>Gender: {character.gender}</p>
+        {character.gender !== "n/a" && <p>Gender: {character.gender}</p>}
         <p>Films: {character.films.map(film => `- ${film} -`)}</p>
         <p>Homeworld: {homeworld}</p>
       </div>
